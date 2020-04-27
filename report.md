@@ -33,21 +33,24 @@ L'applicazione permette di giocare seguendo la [notazione algebrica](https://it.
 
 L'esecuzione dell'applicazione è possibile attraverso linee di comando via [Docker](https://hub.docker.com/).
 
-L'output dell'esecuzione di ***SNA4SO*** è un link ad uno *spreadsheet* creato attraverso le *API* di **Google API Services Sheets** e **Google API Services Drive**.
+L'interazione avviene attraverso un'interfaccia disegnata su linea di comando, dove la ***scacchiera*** viene opportunamente disegnata, indicando anche lettere e numeri di colonna, per permettere all'utente di giocare agevolmente.
 
-Tramite le opzioni inserite da riga di comando si possono analizzare le attività degli utenti (es. pone una domanda in *Maggio 2016*) e le loro interazioni con altri utenti (*es. utente 86 risponde alla domanda di utente 74560*). <br>
-Le opzioni permettono di analizzare le domande/risposte relative ad un dato tag (*es. utenti che hanno risposto a domande con tag `matplotlib`*), una data specifica o anche visualizzare quanto spesso un utente specificato interagisce con altri utenti. <br>
-È possibile decidere il limite massimo di risultati mostrati nello *spreadsheet*.
+Oltre alla possibilità di specificare i diversi movimenti tramite la notazione algebrica, il programma permette all'utente di accedere a diverse funzioni aggiuntive.
+Il comando *moves* permette all'utente di visualizzare tutti i movimenti della partita finora avvenuti, permettendo quindi di consultare lo storico della partita. <br>
 
-**SNA4SO** è stata realizzata durante il corso di [*INGEGNERIA DEL SOFTWARE*](http://www.di.uniba.it/~lanubile/ingsw/) dal gruppo ***dijkstra*** composto da:
-- [Giuseppe Colavito](https://github.com/peppocola)
-- [Antonio Fiore](https://github.com/AntoFlow)
-- [Paolo Gasparro](https://github.com/paologas91)
-- [Antonio Grisulli](https://github.com/GreenSully)
-- [Lorenzo Loconte](https://github.com/loreloc)
-- [Gianluca Losciale](https://github.com/LuzDeGea) <br>
+Il comando *captures* invece segnala all'utente tutte le catture avvenute fino a quel momento.
 
-Nell'anno accademico 2018/2019.
+
+**SCACCHI** è figlia del corso di [*INGEGNERIA DEL SOFTWARE*](http://www.di.uniba.it/~lanubile/ingsw/) tenuto dal Professore Filippo Lanubile nell'Anno Accademico 2019-2020, dal gruppo ***wilkinson*** composto da:
+- [Gianluca Laera](https://github.com/gian01pie)
+- [Stefano Lozito](https://github.com/stefanolozito)
+- [Vincenzo M.G. Martemucci](https://github.com/raimondoDiSangro)
+- [Andrea Perruggini](https://github.com/Perru21)
+- [Nicola Ragone](https://github.com/nicolara96)
+- [Giuseppe Sancesario](https://github.com/Giuseppe199925)
+- [Pierpaolo Ventrella](https://github.com/pventrella20)
+ <br>
+
 
 <br> <br>
 [Torna all'indice...](#Indice)
