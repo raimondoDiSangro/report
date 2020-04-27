@@ -41,7 +41,7 @@ Il comando *moves* permette all'utente di visualizzare tutti i movimenti della p
 Il comando *captures* invece segnala all'utente tutte le catture avvenute fino a quel momento.
 
 
-**SCACCHI** è figlia del corso di INGEGNERIA DEL SOFTWAREngsw/) tenuto dal [*Professore Filippo Lanubile*] (http://www.di.uniba.it/~lanubile/) nell'Anno Accademico 2019-2020, dal gruppo ***wilkinson*** composto da:
+**SCACCHI** è figlia del corso di INGEGNERIA DEL SOFTWAREngsw/) tenuto dal [*Professore Filippo Lanubile*](http://www.di.uniba.it/~lanubile/) nell'Anno Accademico 2019-2020, dal gruppo ***wilkinson*** composto da:
 - [Gianluca Laera](https://github.com/gian01pie)
 - [Stefano Lozito](https://github.com/stefanolozito)
 - [Vincenzo M.G. Martemucci](https://github.com/raimondoDiSangro)
