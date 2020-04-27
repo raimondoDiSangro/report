@@ -58,7 +58,7 @@ Il comando *captures* invece segnala all'utente tutte le catture avvenute fino a
 # Modello di dominio
 
 <center>
-<img width="700" alt="Modello_di_dominio.jpg" src="./drawings/ModelloDiDominio/Modello_di_dominio.jpg">
+<img width="700" alt="Modello_di_dominio.jpg" src="xxxxxxxxxxxxxxxxxxxxxx">
 </center>
 
 <br> <br>
@@ -66,209 +66,93 @@ Il comando *captures* invece segnala all'utente tutte le catture avvenute fino a
 
 # Requisiti specifici
 
-* Visualizzare la lista dei primi 100 id utente (User) che hanno fatto almeno una domanda (Question) in un dato anno, mese e giorno
-
-  Story points: 8
-
-  Criteri di accettazione:
-  Eseguendo il comando
-
-  `docker run --rm softeng1819infuniba/dijkstra yyyy=2016 mm=02 dd=11 type=question limit=100`
-
-  il risultato è una lista di owner_user_id univoci e non nulli, ordinati in modo crescente come da esempio in figura:
-
-  ![sprint1-query1](./drawings/UserStories/sprint1-query1.png)
-
-* Visualizzare la lista dei primi 100 id utente (User) che hanno dato almeno una risposta (Answer) in un dato anno, mese e giorno.
-
-  Story points: 5
-
-  Criteri di accettazione:
-
-  Eseguendo il comando
-
-  `docker run --rm softeng1819infuniba/dijkstra yyyy=2016 mm=02 dd=11 type=answer limit=100`
-
-  il risultato è una lista di owner_user_id univoci e non nulli, ordinati in modo crescente come da esempio in figura:
-
-  ![sprint1-query2](./drawings/UserStories/sprint1-query2.png)
-
-* Visualizzare la lista dei primi 100 id utente (User) che hanno fatto almeno un Post in un dato mese, anno, giorno (un Post può essere una domanda o una risposta).
-
-  Story points: 2
-
-  Criteri di accettazione:
-
-  Eseguendo il comando
-
-  `docker run --rm softeng1819infuniba/dijkstra yyyy=2016 mm=02 dd=11 type=post limit=100`
-
-  il risultato è una lista di owner_user_id univoci e non nulli, ordinati in modo crescente come da esempio in figura:
-
-  ![sprint1-query3](./drawings/UserStories/sprint1-query3.png)
-
-* Visualizzare la lista dei primi 100 id utente (User) che hanno fatto almeno una domanda (Question) su un dato argomento (Tag) in un dato mese e anno.
-
-  Story points: 3
-
-  Criteri di accettazione:
-
-  Eseguendo il comando
-
-  `docker run --rm softeng1819infuniba/dijkstra yyyy=2016 mm=02 type=question taglike=java limit=100`
-
-  il risultato è una lista di owner_user_id univoci e non nulli, ordinati in modo crescente come da esempio in figura:
-
-  ![sprint1-query4](./drawings/UserStories/sprint1-query4.png)
-
-* Visualizzare la lista dei primi 100 id utente (User) che hanno dato almeno una risposta (Answer) su un dato argomento (Tag) in un dato mese e anno
-
-  Story points: 8
-
-  Criteri di accettazione:
-
-  Eseguendo il comando
-
-  `docker run --rm softeng1819infuniba/dijkstra yyyy=2016 mm=02 type=answer taglike=java limit=100`
-
-  il risultato è una lista di owner_user_id univoci e non nulli, ordinati in modo crescente come da esempio in figura:
-
-  <img src="./drawings/UserStories/sprint1-query5.png" alt="sprint1-query5" width="100"/>
-
-* Visualizzare la lista dei primi 100 id utente (User) che hanno fatto almeno un Post su un dato argomento (Tag) in un dato mese e anno (un Post può essere una domanda o una risposta)
-
-  Story points: 5
-
-  Criteri di accettazione:
-
-  Eseguendo il comando
-
-  `docker run --rm softeng1819infuniba/dijkstra yyyy=2016 mm=02 type=post taglike=java limit=100`
-
-  il risultato è una lista di owner_user_id univoci e non nulli, ordinati in modo crescente come da esempio in figura:
-
-  ![sprint1-query6](./drawings/UserStories/sprint1-query6.png)
-
-* Visualizzare la lista delle prime 100 coppie (from, to) relative a domande (Question) poste in un dato anno, mese e giorno
-
-  Story points: 5
-
-  Criteri di accettazione:
-
-  Eseguendo il comando
-
-  `docker run --rm softeng1819infuniba/dijkstra yyyy=2016 mm=02 dd=11 type=question edge=yes limit=100`
-
-  il risultato è una lista come da esempio in figura:
-
-  <img width="94" alt="sprint2-query1" src="./drawings/UserStories/sprint2-query1.png">
-
-
-  - Verificare che per ogni domanda e risposta sia visualizzata una riga con la coppia (from, to) dove to è l'id dell'utente che ha posto la domanda e from è l'id dell'utente che ha risposto.
-  - Verificare che le coppie (from, to) non contengano valori nulli
-  - Verificare che le coppie (from, to) siano ordinate in modo crescente
-  - Verificare che le coppie (from, to) non siano ripetute.
-
-* Visualizzare la lista delle prime 100 coppie (from, to) relative a domande (Question) poste da un determinato utente.
-
-  Story points: 3
-
-  Criteri di accettazione:
-
-  Eseguendo il comando
-
-  `docker run --rm softeng1819infuniba/dijkstra type=question user=1109 edge=yes limit=100`
-
-  il risultato è una lista come da esempio in figura:
-
-  <img width="94" alt="sprint2-query2" src="./drawings/UserStories/sprint2-query2.png">
-
-
-  - Verificare che per ogni domanda e risposta sia visualizzata una riga con la coppia (from, to) dove to è l'id dell'utente che ha posto la domanda, specificato come valore di user, e from è l'id dell'utente che ha risposto.
-  - Verificare che le coppie (from, to) non contengano valori nulli
-  - Verificare che le coppie (from, to) siano ordinate in modo crescente
-  - Verificare che le coppie (from, to) non siano ripetute.
-
-* Visualizzare la lista delle prime 100 coppie (from, to) relative a risposte (Answer) date da un determinato utente.
-
-  Story points: 3
-
-  Criteri di accettazione:
-
-  Eseguendo il comando
-
-  `docker run --rm softeng1819infuniba/dijkstra type=answer user=86 edge=yes limit=100`
-
-  il risultato è una lista come da esempio in figura:
-
-  <img width="94" alt="sprint2-query3" src="./drawings/UserStories/sprint2-query3.png">
-
-
-
-  - Verificare che per ogni domanda e risposta sia visualizzata una riga con la coppia (from, to) dove to è l'id dell'utente che ha posto la domanda e from è l'id dell'utente che ha risposto, specificato come valore di user
-  - Verificare che le coppie (from, to) non contengano valori nulli
-  - Verificare che le coppie (from, to) siano ordinate in modo crescente
-  - Verificare che le coppie (from, to) non siano ripetute.
-
-* Visualizzare la lista delle prime 100 triple (from, to, weight) relative a domande (Question) poste in un dato anno, mese e giorno
-
-  Story points: 3
-
-  Criteri di accettazione:
-
-  Eseguendo il comando
-
-  `docker run --rm softeng1819infuniba/dijkstra yyyy=2016 mm=02 dd=11 type=question edge=yes weight=yes limit=100`
-
-  il risultato è una lista come da esempio in figura:
-
-  <img width="131" alt="sprint2-query4" src="./drawings/UserStories/sprint2-query4.png">
-
-
-  - Verificare che per ogni domanda e risposta sia visualizzata una riga con la tripla (from, to, weight) dove to è l'id dell'utente che ha posto la domanda, from è l'id dell'utente che ha risposto e weight è il peso associato al numero di volte che l'utente from ha risposto all'utente to.
-  - Verificare che le triple (from, to, weight) non contengano valori nulli,
-  - Verificare che le triple (from, to, weight) siano ordinate in modo crescente
-  - Verificare che non ci siano triple con (from, to) ripetuti.
-
-* Visualizzare la lista delle prime 100 triple (from, to, weight) relative a domande (Question) poste da un determinato utente.
-
-  Story points: 3
-
-  Criteri di accettazione:
-
-  Eseguendo il comando
-
-  `docker run --rm softeng1819infuniba/dijkstra type=question user=1109 edge=yes weight=yes limit=100`
-
-  il risultato è una lista come da esempio in figura:
-
-  <img width="124" alt="sprint2-query5" src="./drawings/UserStories/sprint2-query5.png">
-
-
-  - Verificare che per ogni domanda e risposta sia visualizzata una riga con la tripla (from, to, weight) dove to è l'id dell'utente che ha posto la domanda, specificato come valore di user, from è l'id dell'utente che ha risposto e weight è il peso associato al numero di volte che l'utente from ha risposto all'utente to.
-  - Verificare che le triple (from, to, weight) non contengano valori nulli,
-  - Verificare che le triple (from, to, weight) siano ordinate in modo crescente
-  - Verificare che non ci siano triple con (from, to) ripetuti.
-
-* Visualizzare la lista delle prime 100 triple (from, to, weight) relative a risposte (Answer) date da un determinato utente.
-
-  Story points: 3
-
-  Criteri di accettazione:
-
-  Eseguendo il comando
-
-  `docker run --rm softeng1819infuniba/dijkstra type=answer user=86 edge=yes weight=yes limit=100`
-
-  il risultato è una lista come da esempio in figura:
-
-  <img width="124" alt="sprint2-query6" src="./drawings/UserStories/sprint2-query6.png">
-
-
-  - Verificare che per ogni domanda e risposta sia visualizzata una riga con la tripla (from, to, weight) dove to è l'id dell'utente che ha posto la domanda, from è l'id dell'utente che ha risposto, specificato come valore di user, e weight è il peso associato al numero di volte che l'utente from ha risposto all'utente to.
-  - Verificare che le triple (from, to, weight) non contengano valori nulli,
-  - Verificare che le triple (from, to, weight) siano ordinate in modo crescente
-  - Verificare che non ci siano triple con (from, to) ripetuti.
+# USER STORIES
+_______________
+### 1) CREARE ELENCO COMANDI
+  - visualizzare elenco dei comandi
+  > #### CRITERI DI ACCETTAZIONE
+  >> eseguendo il comando  
+  >> [ ***>help*** ]  
+  >> il risultato è una lista di comandi (uno per riga)
+  >>> - **esempio comandi**:  
+  >>> *>board*,  
+  >>> *>import*,  
+  >>> *>export*,  
+  >>> *>quit*,  
+  >>> *...*  
+_______________
+### 2) INIZIARE UNA NUOVA PARTITA
+  - permettere all'utente di interfacciarsi ad una partita
+  > #### CRITERI DI ACCETTAZIONE
+  >> eseguendo il comando  
+  >> [ ***>play*** ]  
+  >> l'applicazione si predispone a ricevere la prima mossa di gioco
+  >>> - il sistema è in grado di ricevere altri comandi in questo stato, ad esempio  
+  >>> *>mostra scacchiera*,  
+  >>> *>annullare*,  
+  >>> *...*
+_______________
+### 3) CHIUDERE IL GIOCO
+  - permettere di uscire dalla partita in corso
+  > #### CRITERI DI ACCETTAZIONE
+  >> eseguendo il comando  
+  >> [ ***>quit*** ]  
+  >> l'applicazione lascia il controllo al sistema operativo
+  >>> - (il sistema non accetta più altri comandi e termina)
+_______________
+### 4) MOSTRARE LA SCACCHIERA
+  - permettere la visualizzazione a schermo (da CLI) della scacchiera nello stato attuale
+  > #### CRITERI DI ACCETTAZIONE
+  >> eseguendo il comando  
+  >> [ ***>board*** ]  
+  >> l'applicazione stampa a video la posizione sulla scacchiera
+  >>> - ogni pezzo è visualizzato con posizione aggiornata all'ultima mossa inserita  
+  >>> - i pezzi sono visualizzati in formato [*Unicode*](https://en.wikipedia.org/wiki/Chess_symbols_in_Unicode)
+_______________
+### 5) MUOVERE UN PEDONE
+  - permettere il movimento del pezzo *pedone* sulla scacchiera
+  > #### CRITERI DI ACCETTAZIONE
+  >> scrivendo il comando in notazione algebrica abbreviata degli scacchi in italiano  
+  >>> - la mossa deve essere legale
+  >>> - se si tenta una mossa non valida viene visualizzato un messaggio *mossa illegale* e l'applicazione rimane in attesa di una mossa valida  
+  >>> - la mossa deve essere scritta come  
+  >>> [**nome pezzo**] + [**casella di arrivo sulla scacchiera**] + [**simbolo speciale**]  
+  >>> dove:    
+  >>>      - [***nome pezzo***] è una lettera riportata nella tabella qui sotto (nel caso dei pedoni non viene utilizzata nessuna lettera)  
+  >>>      - [***casella di arrivo sulla scacchiera***] è un combinazione lettera+numero (id colonna + id riga) [>*chessboard*](https://upload.wikimedia.org/wikipedia/commons/5/51/AlgebraicNotationOnChessboard.png)  
+  >>>      - [***simbolo speciale***] è uno dei simbolo utilizzati per evidenziare il verificarsi di un evento particolare (*scacco*, *scacco matto*, *promozione*, *cattura*, *...*)  
+  
+| `nome pezzo` | Re  | Donna | Torre | Alfiere | Cavallo |
+|--------------|-----|-------|-------|---------|---------|
+| simbolo      | ♔ ♚ | ♕ ♛ | ♖ ♜ | ♗ ♝ | ♘ ♞ |
+| lettera ITA  | R   | D     | T     | A       | C       |
+| lettera ENG  | K   | Q     | R     | B       | N       |
+
+| `eventi` | scacco | scacco doppio | cattura | arrocco corto | arrocco lungo | presa en passant | scacco matto |
+|----------|--------|---------------|---------|---------------|---------------|------------------|:------------:|
+| simbolo  | +      | ++            | x       | 0-0           | 0-0-0         | e.p.             | #            |
+
+ >>> - ***movimento del pedone***
+ >>>    - il pedone può muoversi solo di una casa in avanti, tolta la possibilità di avanzare di due case solo dalla posizione iniziale   
+ >>>    - può catturare i pezzi avversari che si trovano in una delle due caselle oblique a lui adiacenti (a eccezione della presa [en passant](https://lh3.googleusercontent.com/proxy/HdFbE8mPf0x5pYtg7hqGuf2lYdxeZZWUVjgbkjy3ofzEqL_EHpY7zvgWleUN-oAH7ZcafKkFByJezfbaukukb97P0wPq7pWUZo0b0xoA2jBXSSWRv4vT6SBDRgf1UsJOzmRAKghF)): è quindi l'unico pezzo che mangia in modo diverso dal proprio normale movimento  
+ >>>    - se un pedone riesce a raggiungere il lato opposto della scacchiera, il proprietario del pedone lo deve promuovere sostituendolo con un qualsiasi altro pezzo a sua scelta (purché dello stesso colore, e che non sia il re)
+_______________
+### 6) MOSTRARE MOSSE GIOCATE
+  - permettere di visualizzare lo storico delle mosse giocate
+  > #### CRITERI DI ACCETTAZIONE
+  >> eseguendo il comando  
+  >> [ ***>moves***]  
+  >> l'applicazione mostra la storia delle mosse compiute fino a quel momento
+  >>> - le mosse sono visualizzate in notazione algebrica abbreviata in italiano
+_______________
+### 7) VISUALIZZARE LE CATTURE
+  - permettere di visualizzare a video i pezzi catturati nel corso della partita
+  > #### CRITERI DI ACCETTAZIONE
+  >> eseguendo il comando  
+  >> [***>captures***]  
+  >> l'applicazione mostra tutte le catture della partita in corso fino a qual momento
+  >>> - mostrare le catture del Bianco e del Nero in caratteri Unicode
+_______________
 
 <br> <br>
 [Torna all'indice...](#Indice)
