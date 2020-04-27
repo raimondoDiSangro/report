@@ -66,7 +66,6 @@ Il comando *captures* invece segnala all'utente tutte le catture avvenute fino a
 
 # Requisiti specifici
 
-# USER STORIES
 _______________
 ### 1) CREARE ELENCO COMANDI
   - visualizzare elenco dei comandi
