@@ -38,7 +38,7 @@ L'interazione avviene attraverso un'interfaccia disegnata su linea di comando, d
 Oltre alla possibilità di specificare i diversi movimenti tramite la notazione algebrica, il programma permette all'utente di accedere a diverse funzioni aggiuntive.
 Il comando *moves* permette all'utente di visualizzare tutti i movimenti della partita finora avvenuti, permettendo quindi di consultare lo storico della partita. <br>
 
-Il comando *captures* invece segnala all'utente tutte le catture avvenute fino a quel momento.
+Il comando *captures* invece fornisce all'utente una lista contenente tutte le catture avvenute fino a quel momento.
 
 
 **SCACCHI** è figlia del corso di INGEGNERIA DEL SOFTWAREngsw/) tenuto dal [*Professore Filippo Lanubile*](http://www.di.uniba.it/~lanubile/) nell'Anno Accademico 2019-2020, dal gruppo ***wilkinson*** composto da:
@@ -533,17 +533,15 @@ Tale approccio ha previsto quattro sprint di durata variabile. così composti:
 
 # Analisi retrospettiva
 - ### Soddisfazioni
-    Il confronto tra i vari membri del team è stato molto utile e costruttivo. Le nostre discussioni e i nostri scambi di idee riguardo le varie soluzioni per risolvere uno stesso problema hanno insegnato molto ad ogni membro del team.
+    La comunicazione e la puntualità dei membri del gruppo è stata senza dubbio un segnale di maturità e motivazione. I contatti tra di noi sono stati molto costruttivi, gli scambi di idee e i consigli hanno permesso ad ogni membro del team di imparare qualcosa da un altro membro. Questo ha permesso durante l'arco della durata del progetto, ad ogni membro del team di impare qualcosa di nuovo ed utile, oltre che a migliorare l'uso delle metodologie di svilippo AGILE.
     <br> <br>
-    Siamo quasi sempre riusciti a terminare il lavoro da svolgere con largo anticipo, ciò ha permesso, negli ultimi giorni dello sprint, di dedicarsi al refactoring e ad una più calma revisione del lavoro svolto.
+    Gli strumenti [**GitHub**](https://github.com/) e [**Git**](https://git-scm.com/), inzialmente visti con un certo scetticismo, sono diventati imprescindibili per portare avanti lo sviluppo in team.
     <br> <br>
-    [**GitHub**](https://github.com/) e [**Git**](https://git-scm.com/) si sono rivelati strumenti molto comodi ed utili una volta aver imparato le basi ed essersi abituati.
-    <br> <br>
+    Il Daily Scrum Meeting è sempre avvenuto su [**Microsoft Teams**](https://www.microsoft.com/it-it/microsoft-365/microsoft-teams/free?market=it) in virtù della ben nota problematica del nuovo Coronavirus in corso. Il tool di Microsoft si è rivelato molto utile grazie alle sue diverse features.
 
 
 - ### Insoddisfazioni
-    Essendo nuovi al metodo [**SCRUM**](https://it.wikipedia.org/wiki/Scrum_%28informatica%29) e al *Team Work* in questo ambito, è stato difficile per noi limitare la discussione del *Daily Meeting* a pochi minuti con poche domande telegrafiche. Tuttavia questi momenti sono stati molto utili al team per chiarire meglio gli obiettivi e come raggiungerli senza accumulare debito tecnico tra i vari sprint.
-    Con maggiore esperienza probabilmente saremmo riusciti ad essere più diretti e precisi nel *Daily Meeting* e ad essere esaustivi in meno tempo.
+    In alcuni casi, oltre al Daily Scrum Meeting, è stato necessario "incontrarci" per poter dialogare e discutere sulle problematiche che via via si sono presentate. Quindi in aggiunta al metodo [**SCRUM**](https://it.wikipedia.org/wiki/Scrum_%28informatica%29) classico, è stato necessario aggiungere delle sessioni di vero e proprio lavoro congiunto che potesse risolvere i nuovi problemi. Queste sessioni però, si sono via via ridotte in quanto ognuno, grazie all'esperienza accumulata durante le sessioni precedenti, è stato in grado di procedere in autonomia, sempre secondo il [**GitHub flow**](https://guides.github.com/introduction/flow/).
 
 - ### Cosa ci ha fatto impazzire
     Non auguriamo al nostro peggior nemico di dover utilizzare [***VISUAL PARADIGM***](www.visual-paradigm.com).
@@ -551,10 +549,6 @@ Tale approccio ha previsto quattro sprint di durata variabile. così composti:
 
     Nutriamo rancore verso l'IDE [***ECLIPSE***](https://www.eclipse.org/), che sebbene con *Formatter* e *Save Actions* ci abbia evitato molti errori di [**CheckStyle**](https://en.wikipedia.org/wiki/Checkstyle) , ci ha rovinato diversi pomeriggi mostrando errori inesistenti, poi risolti solamente chiudendolo e riaprendolo dopo varie imprecazioni. A volte abbiamo anche dovuto fare un *Clean* per risolvere errori che non avevano motivo di esistere. È stato frustrante soprattutto per alcuni del nostro team doverlo utilizzare, abituati ad un semplice text editor (vedi [**ATOM**](https://atom.io/)) e alla compilazione/esecuzione da riga di comando, anche grazie alla eperienza acquisita nel primo semestre con il prof. [*Nicola Di Mauro*](http://www.di.uniba.it/~ndm/), durante l'insegnamento di [**ASD**](http://www.di.uniba.it/~ndm/courses/asd/)
 
-    ~~~~
-    sudo apt-get autoremove eclipse*
-    rm -r ~/.eclipse/
-    ~~~~
-
+   
 <br> <br>
 [Torna all'indice...](#Indice)
