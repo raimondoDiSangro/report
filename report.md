@@ -21,13 +21,14 @@
 
 
 # Introduzione
-**SCACCHI** è una applicazione interattiva di gioco degli ***scacchi*** (*SNA*) sviluppata su Java e giocaivle tramite interfaccia a linea di comando.
+**SCACCHI** è una applicazione interattiva di gioco degli ***scacchi*** (*SNA*) sviluppata su Java e giocabile tramite interfaccia a linea di comando.
 
 [***Il gioco degli scacchi***](https://it.wikipedia.org/wiki/Scacchi) è uno dei giochi più antichi, affascinanti e popolari al mondo.
 
 [***FIDE***](https://www.fide.com/) è il sito web della Federazione internazionale degli scacchi, la principale organizzazione mondiale del gioco degli scacchi, che organizza campionati mondiali e che regolamenta il gioco.
 
 Il nostro gioco è basato su una matrice 8x8 che rappresenta le 64 case di una scacchiera.
+![Chess_board](https://github.com/raimondoDiSangro/report/blob/master/chessboard.png)
 
 L'applicazione permette di giocare seguendo la [notazione algebrica](https://it.wikipedia.org/wiki/Notazione_algebrica) abbreviata degli scacchi.
 
@@ -41,7 +42,7 @@ Il comando *moves* permette all'utente di visualizzare tutti i movimenti della p
 Il comando *captures* invece fornisce all'utente una lista contenente tutte le catture avvenute fino a quel momento.
 
 
-**SCACCHI** è figlia del corso di INGEGNERIA DEL SOFTWAREngsw/) tenuto dal [*Professore Filippo Lanubile*](http://www.di.uniba.it/~lanubile/) nell'Anno Accademico 2019-2020, dal gruppo ***wilkinson*** composto da:
+**SCACCHI** è figlia del corso di INGEGNERIA DEL SOFTWARE tenuto dal [*Professore Filippo Lanubile*](http://www.di.uniba.it/~lanubile/) nell'Anno Accademico 2019-2020, dal gruppo ***wilkinson*** composto da:
 - [Gianluca Laera](https://github.com/gian01pie)
 - [Stefano Lozito](https://github.com/stefanolozito)
 - [Vincenzo M.G. Martemucci](https://github.com/raimondoDiSangro)
@@ -130,6 +131,17 @@ _______________
 | `eventi` | scacco | scacco doppio | cattura | arrocco corto | arrocco lungo | presa en passant | scacco matto |
 |----------|--------|---------------|---------|---------------|---------------|------------------|:------------:|
 | simbolo  | +      | ++            | x       | 0-0           | 0-0-0         | e.p.             | #            |
+
+| a | b | c | d | e | f | g | h |   |
+|---|---|---|---|---|---|---|---|---|
+|   |   |   |   |   |   |   |   | 8 |
+|   |   |   |   |   |   |   |   | 7 |
+|   |   | x |   |   |   | x |   | 6 |
+|   |   | ♟ |   |   |   | ♙ | ♟ | 5 |
+|   | x |   | ♙x| x |x♙ |   |   | 4 |
+|   | x |   |   | ♟ |   |   |   | 3 |
+|   | ♟ |   |   |   |   |   |   | 2 |
+|   |   |   |   |   |   |   |   | 1 |
 
  >>> - ***movimento del pedone***
  >>>    - il pedone può muoversi solo di una casa in avanti, tolta la possibilità di avanzare di due case solo dalla posizione iniziale   
