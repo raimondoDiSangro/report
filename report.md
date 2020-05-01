@@ -58,9 +58,7 @@ Il comando *captures* invece fornisce all'utente una lista contenente tutte le c
 
 # Modello di dominio
 
-<center>
-<img width="700" alt="Modello_di_dominio.jpg" src="xxxxxxxxxxxxxxxxxxxxxx">
-</center>
+![Domain Model](https://github.com/raimondoDiSangro/report/blob/master/diagrams/ModelDomainv2-ids1920.png)
 
 <br> <br>
 [Torna all'indice...](#Indice)
