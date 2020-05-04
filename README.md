@@ -508,11 +508,11 @@ docker run --rm softeng1819infuniba/dijkstra <options>
 [Torna all'indice...](#Indice)
 
 # Processo di sviluppo e organizzazione del lavoro
-Il processo di sviluppo di **SNA4SO** è avvenuto seguendo un approccio *simil-* [***SCRUM***](https://it.wikipedia.org/wiki/Scrum_%28informatica%29).
-Tale approccio ha previsto quattro sprint di durata variabile. così composti:
-  - I professori hanno "interpretato" il ruolo del **Product Owner**.
-  Per ogni sprint, in aula e via [*Slack*](https://slack.com/intl/en-it/) ci sono stati comunicati i requisiti e le priorità sotto forma di *Definition of Done* e *User Stories*.
-  Abbiamo realizzato la *board* del progetto e, dallo Sprint 2, abbiamo anche stimato gli *Story Points* delle varie *User Story* (**Sprint Backlog**).
+Il processo di sviluppo di **SCACCHI** ha seguito un approccio di tipo [***SCRUM***](https://it.wikipedia.org/wiki/Scrum_%28informatica%29), con alcune modifiche.
+Lo sviluppo dell'applicazione ha previsto tre sprint di diversa durata. 
+  - Il Professori ha ricoperto, a seconda delle necessità e per fini didattici, il ruolo del **Product Owner** e quello dello **Scrum Master**.
+  Prima dell'inizio di ogni sprint, ci sono stati comunicati , in aula e via [*Slack*](https://slack.com/intl/en-it/) ci sono stati comunicati gli obiettivi da realizzare, e le loro priorità, attraverso i concetti di *User Stories* e *Definition of Done*.
+  Sono state previste delle board per ogni sprint, ed una board generale di **Product Backlog** in cui sono state inserite una serie di *User Story* da poter realizzare in futuro.
   <br> <br>
   - La *Definition of Done* definiva lo **Sprint Goal**, l'obiettivo da raggiugnere dal Team alla fine dello sprint.
   <br> <br>
