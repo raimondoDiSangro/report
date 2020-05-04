@@ -510,16 +510,14 @@ docker run --rm softeng1819infuniba/dijkstra <options>
 # Processo di sviluppo e organizzazione del lavoro
 Il processo di sviluppo di **SCACCHI** ha seguito un approccio di tipo [***SCRUM***](https://it.wikipedia.org/wiki/Scrum_%28informatica%29), con alcune modifiche.
 Lo sviluppo dell'applicazione ha previsto tre sprint di diversa durata. 
-  - Il Professori ha ricoperto, a seconda delle necessità e per fini didattici, il ruolo del **Product Owner** e quello dello **Scrum Master**.
-  Prima dell'inizio di ogni sprint, ci sono stati comunicati , in aula e via [*Slack*](https://slack.com/intl/en-it/) ci sono stati comunicati gli obiettivi da realizzare, e le loro priorità, attraverso i concetti di *User Stories* e *Definition of Done*.
-  Sono state previste delle board per ogni sprint, ed una board generale di **Product Backlog** in cui sono state inserite una serie di *User Story* da poter realizzare in futuro.
+  - Il Professore ha ricoperto, a seconda delle necessità e per fini didattici, il ruolo del **Product Owner** e quello dello **Scrum Master**.
+  Prima dell'inizio di ogni sprint, ci sono stati comunicati  gli obiettivi da realizzare, e le loro priorità, attraverso i concetti di *User Stories* e *Definition of Done*.
+  Sono state previste delle board per ogni sprint, ed una board generale di **Product Backlog** in cui è stato elencato tutto il lavoro da fare in futuro, sotto forma di *User Story*.
+  Le priorità sono quindi state definite dal Product Owner, e le storie associate, hanno fatto parte della *Sprint Board* di ogni sprint.
   <br> <br>
-  - La *Definition of Done* definiva lo **Sprint Goal**, l'obiettivo da raggiugnere dal Team alla fine dello sprint.
+  - L'obiettivo del team da raggiungere alla fine di ogni sprint, detto **Sprint Goal**, è stato dettato, dalla *Definition of Done*, una lista contenente le user story da portare a termine, per considerare lo sprint compiuto. 
   <br> <br>
-  - La ripartizione del lavoro è avvenuta in modo flessibile. Non c'erano dei ruoli prestabiliti e ogni componente si è proposto autonomamente per lo svolgimento di un compito specifico.
-  <br> <br>
-  - La lista dei compiti da svolgere è stata realizzata tramite una lavagna virtuale fornita da [**GitHub**](https://github.com/) (*Project Board*).
-  La lavagna è stata organizzata in stile [*Kanban*](https://it.wikipedia.org/wiki/Kanban), con *4+1* colonne:
+  - Ogni *Sprint board* è stata rappresentata tramite una board virtuale su [**GitHub**](https://github.com/), organizzata in stile [*Kanban*](https://it.wikipedia.org/wiki/Kanban) secondo questo critetrio:   
   <br> <br>
     - **TO DO**, compiti non ancora svolti
     - **IN PROGRESS**, compiti in svolgimento
@@ -527,16 +525,13 @@ Lo sviluppo dell'applicazione ha previsto tre sprint di diversa durata.
     - **READY**, compiti svolti ma in attesa di revisione da parte dei Professori
     - **DONE**, compiti svolti che non necessitano di ulteriore revisione
   <br> <br>
-  - Le varie attività sono state gestite seguendo il **GitHub Flow**: <br>
-    ogni *Issue* è stata assegnata ad uno o due membri del team che hanno lavorato su un *branch* per implementare cambiamenti nel software.
-    Una volta completata la fase di sviluppo e superata la fase di testing, il *branch* è stato *pushato* in remoto per permettere ad uno o più componenti del team di effettuare la fase di review e per attendere l'esito della *build* di *Travis-CI*.
-    Superate queste due fasi, venivano risolti i conflitti se presenti e poi effettuato il *merge* sul *master*.
+  - Il gruppo ha gestito in autonomia la suddivisione del lavoro, sulla quale è sempre stata presenta una certa flessibilità in base alle varie problematiche da risolvere.
   <br> <br>
-  - Non ci sono stati dei veri e propri **Daily Meeting** con orario e durata specifici da rispettare. Il *Daily Meeting* è avvenuto all'inizio di ogni incontro (virtuale o fisico) del team, aveva durata variabile in base all'argomento di discussione, precedeva la ripartizione dei compiti e l'inizio del lavoro vero e proprio.
+  - La gestione dello sviluppo è stato coordinato attraverso il **GitHub Flow**: <br>
+    il lavoro da svolgere è stato rappresentato da diverse *Issue*, ogni issue è stato assegnato ad almeno un membro del gruppo, ed è stata associata ad un *branch* sul quale sviluppare il software necessario.
+    Alla fine dello sviluppo necessario per un *Issue*, il contenuto del *branch* è stato testato e sottoposto alla review degli altri componenti del gruppo tramite una *pull request*. Solo quando il team ha approvato il software associato all'issue in pull request, il branch è stato inserito all'interno del branch *master* attraverso un'operazione di *merge*, previa risoluzione di eventuali conflitti.
   <br> <br>
-  - Ci sono stati degli ulteriori momenti di discussione sul lavoro svolto e da svolgere, avvenute in aula tra una lezione e l'altra, non sempre immediatamente seguiti da una fase di sviluppo.
-  <br> <br>
-  - Sia per la fase di sviluppo, sia per i *Daily Meeting*, nella maggior parte dei casi abbiamo comunicato via [**Skype**](https://www.skype.com/it/), essendo i vari componenti del team per la maggior parte pendolari e provenienti da luoghi distanti tra loro. Per lo sviluppo in *Pair-Programming* abbiamo spesso utilizzato lo strumento *condivisione schermo* di [*Skype*](https://www.skype.com/it/) che ci ha permesso di avere maggiore possibilità di aiutarci a vicenda.
+  - I **Daily Meeting** sono avvenuti quotidianamente su [**Microsoft Teams**](https://www.microsoft.com/it-it/microsoft-365/microsoft-teams/free?market=it), per via dell'impossibilità di incontrarsi di persona, dettata dalla diffusione del virus SARS-CoV-2. Anche alcune sessioni di sviluppo sono avvenute tramite Microsoft Teams, che è risultato molto utile grazie agli strumenti di condivisione dello schermo, e alla [**Whiteboard**](https://www.microsoft.com/it-it/microsoft-365/microsoft-whiteboard/digital-whiteboard-app) associata.
 
 <br> <br>
 [Torna all'indice...](#Indice)
@@ -554,10 +549,11 @@ Lo sviluppo dell'applicazione ha previsto tre sprint di diversa durata.
     In alcuni casi, oltre al Daily Scrum Meeting, è stato necessario "incontrarci" per poter dialogare e discutere sulle problematiche che via via si sono presentate. Quindi in aggiunta al metodo [**SCRUM**](https://it.wikipedia.org/wiki/Scrum_%28informatica%29) classico, è stato necessario aggiungere delle sessioni di vero e proprio lavoro congiunto che potesse risolvere i nuovi problemi. Queste sessioni però, si sono via via ridotte in quanto ognuno, grazie all'esperienza accumulata durante le sessioni precedenti, è stato in grado di procedere in autonomia, sempre secondo il [**GitHub flow**](https://guides.github.com/introduction/flow/).
 
 - ### Cosa ci ha fatto impazzire
-    Non auguriamo al nostro peggior nemico di dover utilizzare [***VISUAL PARADIGM***](www.visual-paradigm.com).
-    Il software per la modellazione [***UML***](https://it.wikipedia.org/wiki/Unified_Modeling_Language) è risultato macchinoso e scomodo in entrambe le sue versioni (WEB e non). Spesso abbiamo avuto problemi inspiegabili (es. frecce sparite). *Visual Paradigm* non ci è sembrato molto *user-friendly*. Ha una interfaccia vecchia e poco intuitiva. È molto difficile imparare ad utilizzarlo per bene senza prima aver passato diverse ore nel reparto di neuropsichiatria. Abbiamo trovato molto più comodo (quando possibile), utilizzare una lavagna e disegnare a mano i diagrammi UML. Non avendo sempre questa possibilità ed essendo le foto alla lavagna poco "formali" per la stesura di una relazione tecnica, abbiamo dovuto utilizzarlo. Siamo molto felici di aver finito e speriamo di non rivederlo mai più.
 
-    Nutriamo rancore verso l'IDE [***ECLIPSE***](https://www.eclipse.org/), che sebbene con *Formatter* e *Save Actions* ci abbia evitato molti errori di [**CheckStyle**](https://en.wikipedia.org/wiki/Checkstyle) , ci ha rovinato diversi pomeriggi mostrando errori inesistenti, poi risolti solamente chiudendolo e riaprendolo dopo varie imprecazioni. A volte abbiamo anche dovuto fare un *Clean* per risolvere errori che non avevano motivo di esistere. È stato frustrante soprattutto per alcuni del nostro team doverlo utilizzare, abituati ad un semplice text editor (vedi [**ATOM**](https://atom.io/)) e alla compilazione/esecuzione da riga di comando, anche grazie alla eperienza acquisita nel primo semestre con il prof. [*Nicola Di Mauro*](http://www.di.uniba.it/~ndm/), durante l'insegnamento di [**ASD**](http://www.di.uniba.it/~ndm/courses/asd/)
+    ~~Nutriamo rancore verso l'IDE [***ECLIPSE***](https://www.eclipse.org/), che sebbene con *Formatter* e *Save Actions* ci abbia evitato molti errori di [**CheckStyle**](https://en.wikipedia.org/wiki/Checkstyle) , ci ha rovinato diversi pomeriggi mostrando errori inesistenti, poi risolti solamente chiudendolo e riaprendolo dopo varie imprecazioni. A volte abbiamo anche dovuto fare un *Clean* per risolvere errori che non avevano motivo di esistere. È stato frustrante soprattutto per alcuni del nostro team doverlo utilizzare, abituati ad un semplice text editor (vedi [**ATOM**](https://atom.io/)) e alla compilazione/esecuzione da riga di comando, anche grazie alla eperienza acquisita nel primo semestre con il prof. [*Nicola Di Mauro*](http://www.di.uniba.it/~ndm/), durante l'insegnamento di [**ASD**](http://www.di.uniba.it/~ndm/courses/asd/)~~
+
+
+    ~~Nutriamo rancore verso l'IDE [***ECLIPSE***](https://www.eclipse.org/), che sebbene con *Formatter* e *Save Actions* ci abbia evitato molti errori di [**CheckStyle**](https://en.wikipedia.org/wiki/Checkstyle) , ci ha rovinato diversi pomeriggi mostrando errori inesistenti, poi risolti solamente chiudendolo e riaprendolo dopo varie imprecazioni. A volte abbiamo anche dovuto fare un *Clean* per risolvere errori che non avevano motivo di esistere. È stato frustrante soprattutto per alcuni del nostro team doverlo utilizzare, abituati ad un semplice text editor (vedi [**ATOM**](https://atom.io/)) e alla compilazione/esecuzione da riga di comando, anche grazie alla eperienza acquisita nel primo semestre con il prof. [*Nicola Di Mauro*](http://www.di.uniba.it/~ndm/), durante l'insegnamento di [**ASD**](http://www.di.uniba.it/~ndm/courses/asd/)~~
 
    
 <br> <br>
