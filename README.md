@@ -483,20 +483,34 @@ L'ultimo design pattern utilizzato è quello del **Singleton**. La classe **Pars
 
 # Manuale utente
 
-* Esecuzione via Docker attraverso il comando:
-```bash
-docker run --rm softeng1819infuniba/dijkstra <options>
+*Requisiti di sistema per l'app Scacchi
+
+Elenco dei terminali supportati su cui poter eseguire il container dell'app scacchi:
+
+Linux:
+terminal
+Mac OS
+terminal
+Windows
+Windows Terminal (preview)
+Terminal del sottosistema Windows per Linux
+Git Bash (in questo caso il comando Docker ha come prefisso winpty; es: winpty docker -it ....)
+
+
+*Esecuzione via Docker attraverso il comando:
 ```
-* `options` include i seguenti parametri di input:
-   - `type`: il tipo di post cercato in Stack Overflow, definito in `{question,answer,post}` (es., `type=post`)
-   - `yyyy`: l'anno in cui un post è stato creato (es., `yyyy=2012`)
-   - `mm`: il mese in cui un post è stato creato (es., `mm=01`)
-   - `dd`: il giorno in cui un post è stato creato (es., `dd=07`)
-   - `taglike`: la sottostringa da cercare nei tag applicati alle domande (es., `taglike=java` varrà per le domande taggate con `java`, `java9`, etc.)
-   - `limit`: il limite al numero di risultati da restituire in una query (es., `limit=1000`)
-   - `edge`: l'opzione per indicare che l'output deve includere gli archi (es., `edge=yes`); il default è output di soli nodi
-   - `weight`: l'opzione per indicare che l'output relativo agli archi deve includere anche i pesi (es. `weight=yes`); il default è output di archi senza pesi
-   - `user`: l'id dell'utente che ha creato un post (es. `user=86`)
+docker run -it --rm docker.pkg.github.com/softeng1920-inf-uniba/docker_1920/wilkinson:latest
+```
+
+
+* `play` consente di iniziare una nuova partita e offre questi altri comandi:
+   - comando: dove per "comando" si intende una valida stringa in notazione algebrica
+   - `board`: mostra la scacchiera con la configurazione dei pezzi attuale
+   - `moves`: mostra in notazione algebrica tutti i movimenti eseguiti finora
+   - `captures`: mostra tutte le catture avvenute fino al momento in cui viene eseguito il comando
+   - `help`: mostra i comandi disponibili per l'applicazione
+   - `play`: consente di interrompere la partita in corso, e inizarne una nuova
+   - `quit`: permette all'utente di abbandonare la partita in corso
 
 * Al termine di ogni esecuzione di sna4so (output):
   - i risultati di una query sono salvati in un Google Spreedsheet attraverso le relative API
