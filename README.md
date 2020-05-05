@@ -488,12 +488,12 @@ L'ultimo design pattern utilizzato è quello del **Singleton**. La classe **Pars
 Elenco dei terminali supportati su cui poter eseguire il container dell'app scacchi:
 
 Linux:
-terminal
-Mac OS
-terminal
-Windows
-Windows Terminal (preview)
-Terminal del sottosistema Windows per Linux
+	terminal
+Mac OS:
+	terminal
+Windows:
+	-Windows Terminal (preview)
+	-Terminal del sottosistema Windows per Linux
 Git Bash (in questo caso il comando Docker ha come prefisso winpty; es: winpty docker -it ....)
 
 
