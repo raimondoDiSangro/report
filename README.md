@@ -510,7 +510,7 @@ docker run --rm softeng1819infuniba/dijkstra <options>
 # Processo di sviluppo e organizzazione del lavoro
 Il processo di sviluppo di **SCACCHI** ha seguito un approccio di tipo [***SCRUM***](https://it.wikipedia.org/wiki/Scrum_%28informatica%29), con alcune modifiche.
 Lo sviluppo dell'applicazione ha previsto tre sprint di diversa durata. 
-  - Il Professore ha ricoperto, a seconda delle necessità e per fini didattici, il ruolo del **Product Owner** e quello dello **Scrum Master**.
+  - Il Professore ha ricoperto, a seconda delle necessità e per fini didattici, il ruolo del **Product Owner**, assumendosi la responsabilità della gestione del Product Backlog, e quello dello **Scrum Master**, fornendo aiuto a capire le regole, la teoria ed i valori di Scrum. 
   Prima dell'inizio di ogni sprint, ci sono stati comunicati  gli obiettivi da realizzare, e le loro priorità, attraverso i concetti di *User Stories* e *Definition of Done*.
   Sono state previste delle board per ogni sprint, ed una board generale di **Product Backlog** in cui è stato elencato tutto il lavoro da fare in futuro, sotto forma di *User Story*.
   Le priorità sono quindi state definite dal Product Owner, e le storie associate, hanno fatto parte della *Sprint Board* di ogni sprint.
@@ -525,7 +525,7 @@ Lo sviluppo dell'applicazione ha previsto tre sprint di diversa durata.
     - **READY**, compiti svolti ma in attesa di revisione da parte dei Professori
     - **DONE**, compiti svolti che non necessitano di ulteriore revisione
   <br> <br>
-  - Il gruppo ha gestito in autonomia la suddivisione del lavoro, sulla quale è sempre stata presenta una certa flessibilità in base alle varie problematiche da risolvere.
+  - Come gruppo ci siamo auto-organizzati ed abbiamo gestito in autonomia la suddivisione del lavoro. I vari componenti hanno affrontato le varie problematiche da affrontare con flessibilità ma sempre con responsabilità nei confronti del lavoro da svolgere e nei confronti degli altri componenti del gruppo.
   <br> <br>
   - La gestione dello sviluppo è stato coordinato attraverso il **GitHub Flow**: <br>
     il lavoro da svolgere è stato rappresentato da diverse *Issue*, ogni issue è stato assegnato ad almeno un membro del gruppo, ed è stata associata ad un *branch* sul quale sviluppare il software necessario.
