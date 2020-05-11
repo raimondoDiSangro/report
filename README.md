@@ -415,7 +415,7 @@ Infatti lo stile MVP è adatto per i sistemi interattivi, in cui c'è una netta 
 ... e il diagramma di sequenza relativo alla user story 1 dello sprint 2.
 
 <center>
-	<img width="900" alt="Sprint2Query1Sequence.png" src="./drawings/OODesign/Sprint2Query1Sequence.png">
+	<img width="900" alt="IDS1920-sequenceDiagram-us13_sprint2.png" src="./diagrams/IDS1920-sequenceDiagram-us13_sprint2.png">
 </center>
 
 <br> <br>
@@ -487,14 +487,14 @@ L'ultimo design pattern utilizzato è quello del **Singleton**. La classe **Pars
 
 Elenco dei terminali supportati su cui poter eseguire il container dell'app scacchi:
 
-Linux:
-	terminal
-Mac OS:
-	terminal
-Windows:
-	-Windows Terminal (preview)
-	-Terminal del sottosistema Windows per Linux
-Git Bash (in questo caso il comando Docker ha come prefisso winpty; es: winpty docker -it ....)
+Linux:  
+	terminal  
+Mac OS:  
+	terminal  
+Windows:  
+	-Windows Terminal (preview)  
+	-Terminal del sottosistema Windows per Linux  
+	-Git Bash (in questo caso il comando Docker ha come prefisso winpty; es: winpty docker -it ....)  
 
 
 *Esecuzione via Docker attraverso il comando:
