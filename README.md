@@ -399,7 +399,7 @@ Infatti lo stile MVP è adatto per i sistemi interattivi, in cui c'è una netta 
 * Di seguito viene presentato il diagramma delle classi ...
 
 <center>
-	<img width="900" alt="Classes.png" src="./drawings/OODesign/Classes.png">
+	<img width="900" alt="ClassDiagram_SWprospective-ids1920.png" src="./diagrams/ClassDiagram_SWprospective-ids1920.png">
 </center>
 
 <br> <br>
