@@ -404,7 +404,7 @@ Infatti lo stile MVP è adatto per i sistemi interattivi, in cui c'è una netta 
 
 <br> <br>
 
-... il diagramma di sequenza relativo alla user story 1 dello sprint 1 ...
+... il diagramma di sequenza relativo alla user story 5 dello sprint 1 ...
 
 <center>
 	<img width="900" alt="Sprint1Query1Sequence.png" src="./drawings/OODesign/Sprint1Query1Sequence.png">
@@ -412,7 +412,7 @@ Infatti lo stile MVP è adatto per i sistemi interattivi, in cui c'è una netta 
 
 <br> <br>
 
-... e il diagramma di sequenza relativo alla user story 1 dello sprint 2.
+... e il diagramma di sequenza relativo alla user story 6 dello sprint 2.
 
 <center>
 	<img width="900" alt="IDS1920-sequenceDiagram-us13_sprint2.png" src="./diagrams/IDS1920-sequenceDiagram-us13_sprint2.png">
