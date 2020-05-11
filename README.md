@@ -504,7 +504,7 @@ docker run -it --rm docker.pkg.github.com/softeng1920-inf-uniba/docker_1920/wilk
 
 
 * `play` consente di iniziare una nuova partita e offre questi altri comandi:
-   - comando: dove per "comando" si intende una valida stringa in notazione algebrica
+   - comando: dove per "comando" si intende una stringa valida in notazione algebrica
    - `board`: mostra la scacchiera con la configurazione dei pezzi attuale
    - `moves`: mostra in notazione algebrica tutti i movimenti eseguiti finora
    - `captures`: mostra tutte le catture avvenute fino al momento in cui viene eseguito il comando
@@ -535,7 +535,7 @@ Lo sviluppo dell'applicazione ha previsto tre sprint di diversa durata.
   <br> <br>
     - **TO DO**, compiti non ancora svolti
     - **IN PROGRESS**, compiti in svolgimento
-    - **REVIEW**, compiti in attesa di *build* di *Travis-CI* e revisione di almeno un componente del team
+    - **REVIEW**, compiti in attesa di *build* di *GitHub Actions* e revisione di almeno un componente del team
     - **READY**, compiti svolti ma in attesa di revisione da parte dei Professori
     - **DONE**, compiti svolti che non necessitano di ulteriore revisione
   <br> <br>
