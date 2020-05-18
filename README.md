@@ -114,7 +114,7 @@ _______________
 _______________
 #### 5) MUOVERE UN PEDONE
   ***Scopo:*** permettere il movimento del pezzo *pedone* sulla scacchiera
-  #### CRITERI DI ACCETTAZIONE
+  ##### CRITERI DI ACCETTAZIONE
   - scrivendo il comando in notazione algebrica abbreviata degli scacchi in italiano  
   	- la mossa deve essere legale
   	- se si tenta una mossa non valida viene visualizzato un messaggio *mossa illegale* e l'applicazione rimane in attesa di una mossa valida  
