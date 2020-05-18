@@ -69,7 +69,7 @@ Il comando *captures* invece fornisce all'utente una lista contenente tutte le c
 
 ### Requisiti funzionali
 _______________
-#### ***[SPRINT 1] user stories***
+#### ***>>>>> [SPRINT 1] user stories <<<<<***
 _______________
 #### 1) CREARE ELENCO COMANDI
   ***Scopo:*** visualizzare elenco dei comandi
@@ -160,7 +160,7 @@ _______________
   - l'applicazione mostra tutte le catture della partita in corso fino a qual momento
   > - mostrare le catture del Bianco e del Nero in caratteri Unicode
 _______________
-#### ***[SPRINT 2] user stories***
+#### ***>>>>> [SPRINT 2] user stories <<<<<***
 _______________
 
 #### 1) MUOVERE UN CAVALLO
