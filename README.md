@@ -94,6 +94,7 @@ _______________
   > *>mostra scacchiera*,  
   > *>annullare*,  
   > *...*
+  > - è possibile iniziare una nuova partita anche a partita già in corso
 _______________
 #### 3) CHIUDERE IL GIOCO
   ***Scopo:*** permettere di uscire dalla partita in corso
