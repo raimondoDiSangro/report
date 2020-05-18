@@ -130,16 +130,9 @@ _______________
 |----------|--------|---------------|---------|---------------|---------------|------------------|:------------:|
 | simbolo  | +      | ++            | x       | 0-0           | 0-0-0         | e.p.             | #            |
 
-| a | b | c | d | e | f | g | h |   |
-|---|---|---|---|---|---|---|---|---|
-|   |   |   |   |   |   |   |   | 8 |
-|   |   |   |   |   |   |   |   | 7 |
-|   |   | x |   |   |   | x |   | 6 |
-|   |   | ♟ |   |   |   | ♙ | ♟ | 5 |
-|   | x |   | ♙x| x |x♙ |   |   | 4 |
-|   | x |   |   | ♟ |   |   |   | 3 |
-|   | ♟ |   |   |   |   |   |   | 2 |
-|   |   |   |   |   |   |   |   | 1 |
+<center>
+	<img width="300" alt="pawn_move.png" src="./images/pawn_move.png">
+</center>
 
  >>> - ***movimento del pedone***
  >>>    - il pedone può muoversi solo di una casa in avanti, tolta la possibilità di avanzare di due case solo dalla posizione iniziale   
@@ -171,16 +164,9 @@ _______________
   >>> - se si tenta una mossa non valida viene visualizzato un messaggio *mossa illegale* e l'applicazione rimane in attesa di una mossa valida  
   >>> - la mossa deve essere preceduta da una 'C' 
   
-| a | b | c | d | e | f | g | h |   |
-|---|---|---|---|---|---|---|---|---|
-|   |   |   |   |   |   |   |   | 8 |
-|   |   | x |   | x |   |   |   | 7 |
-|   | x |   |   |   | x |   |   | 6 |
-|   |   |   | ♞ |   |   |   |   | 5 |
-|   | x |   |   |   | x |   |   | 4 |
-|   |   | x |   | x |   |   |   | 3 |
-|   |   |   |   |   |   |   |   | 2 |
-|   |   |   |   |   |   |   |   | 1 |
+<center>
+	<img width="300" alt="knight_move.png" src="./images/knight_move.png">
+</center>
 
  >>> - ***movimento del cavallo***
  >>>    - il *Cavallo* si muove e cattura alternativamente su case bianche e case nere
@@ -196,16 +182,9 @@ _______________
   >>> - se si tenta una mossa non valida viene visualizzato un messaggio *mossa illegale* e l'applicazione rimane in attesa di una mossa valida  
   >>> - la mossa deve essere preceduta da una 'A' 
   
-| a | b | c | d | e | f | g | h |   |
-|---|---|---|---|---|---|---|---|---|
-| x |   |   |   |   |   | x |   | 8 |
-|   | x |   |   |   | x |   |   | 7 |
-|   |   | x |   | x |   |   |   | 6 |
-|   |   |   | ♝ |   |   |   |   | 5 |
-|   |   | x |   | x |   |   |   | 4 |
-|   | x |   |   |   | x |   |   | 3 |
-| x |   |   |   |   |   | x |   | 2 |
-|   |   |   |   |   |   |   | x | 1 |
+<center>
+	<img width="300" alt="bishop_move.png" src="./images/bishop_move.png">
+</center>
 
  >>> - ***movimento dell'alfiere***
  >>>    - l'*Alfiere* si muove diagonalmente per il numero di caselle libere che ha a disposizione
@@ -219,16 +198,9 @@ _______________
   >>> - se si tenta una mossa non valida viene visualizzato un messaggio *mossa illegale* e l'applicazione rimane in attesa di una mossa valida  
   >>> - la mossa deve essere preceduta da una 'T' 
   
-| a | b | c | d | e | f | g | h |   |
-|---|---|---|---|---|---|---|---|---|
-|   |   |   | x |   |   |   |   | 8 |
-|   |   |   | x |   |   |   |   | 7 |
-|   |   |   | x |   |   |   |   | 6 |
-| x | x | x | ♜ | x | x | x | x | 5 |
-|   |   |   | x |   |   |   |   | 4 |
-|   |   |   | x |   |   |   |   | 3 |
-|   |   |   | x |   |   |   |   | 2 |
-|   |   |   | x |   |   |   |   | 1 |
+<center>
+	<img width="300" alt="rook_move.png" src="./images/rook_move.png">
+</center>
 
  >>> - ***movimento della torre***
  >>>    - la *Torre* si muove sia orizzontalmente sia verticalmente per il numero di caselle libere che ha a disposizione
@@ -242,16 +214,9 @@ _______________
   >>> - se si tenta una mossa non valida viene visualizzato un messaggio *mossa illegale* e l'applicazione rimane in attesa di una mossa valida  
   >>> - la mossa deve essere preceduta da una 'D' 
   
-| a | b | c | d | e | f | g | h |   |
-|---|---|---|---|---|---|---|---|---|
-| x |   |   | x |   |   | x |   | 8 |
-|   | x |   | x |   | x |   |   | 7 |
-|   |   | x | x | x |   |   |   | 6 |
-| x | x | x | ♛ | x | x | x | x | 5 |
-|   |   | x | x | x |   |   |   | 4 |
-|   | x |   | x |   | x |   |   | 3 |
-| x |   |   | x |   |   | x |   | 2 |
-|   |   |   | x |   |   |   | x | 1 |
+<center>
+	<img width="300" alt="quuen_move.png" src="./images/queen_move.png">
+</center>
 
  >>> - ***movimento della donna***
  >>>    - la *Donna* si può muovere in linee rette verticalmente, orizzontalmente o in diagonale per il numero di case non occupate che trova
@@ -267,16 +232,9 @@ _______________
   >>> - il *Re* non può muoversi in case minacciate da pezzi avversari 
   >>> - il *Re* può catturare pezzi avversari
   
-| a | b | c | d | e | f | g | h |   |
-|---|---|---|---|---|---|---|---|---|
-|   |   |   |   |   |   |   |   | 8 |
-|   |   |   |   |   |   |   |   | 7 |
-|   |   | x | x | x |   |   |   | 6 |
-|   |   | x | ♚ | x |   |   |   | 5 |
-|   |   | x | x | x |   |   |   | 4 |
-|   |   |   |   |   |   |   |   | 3 |
-|   |   |   |   |   |   |   |   | 2 |
-|   |   |   |   |   |   |   |   | 1 |
+<center>
+	<img width="300" alt="king_move.png" src="./images/king_move.png">
+</center>
 
  >>> - ***movimento del re***
  >>>    - il *Re* può muoversi di una casa alla volta in qualsiasi direzione (verticale, orizzontale o diagonale) a condizione che la casa di arrivo non sia minacciata da un pezzo avversario
@@ -292,17 +250,13 @@ _______________
   >>> - il *Re* non deve essere minacciato 
   >>> - il *Re*, durante il movimento dell'arrocco, non deve attraversare caselle in cui si troverebbe sotto *scacco* 
   
-| a | b | c | d | e | f | g | h |   |
-|---|---|---|---|---|---|---|---|---|
-|   |   |   |   |   |   |   |   | 3 |
-|   |   |   |   |   |   |   |   | 2 |
-|   |   |   |   | ♚ |   |   | ♜ | 1 |
+<center>
+	<img width="300" alt="castle_short_move.png" src="./images/castle_short_move.png">
+</center>
 
-| a | b | c | d | e | f | g | h |   |
-|---|---|---|---|---|---|---|---|---|
-|   |   |   |   |   |   |   |   | 3 |
-|   |   |   |   |   |   |   |   | 2 |
-|   |   |   |   |   | ♜ | ♚ |   | 1 |
+<center>
+	<img width="300" alt="castle_short_move2.png" src="./images/castle_short_move2.png">
+</center>
 
  >>> - ***definizione di arrocco corto***
  >>>    - l'arrocco è effettuato sull'ala di *Re* (sulla destra della scacchiera)
@@ -319,17 +273,13 @@ _______________
   >>> - il *Re* non deve essere minacciato 
   >>> - il *Re*, durante il movimento dell'arrocco, non deve attraversare caselle in cui si troverebbe sotto *scacco* 
   
-| a | b | c | d | e | f | g | h |   |
-|---|---|---|---|---|---|---|---|---|
-|   |   |   |   |   |   |   |   | 3 |
-|   |   |   |   |   |   |   |   | 2 |
-| ♜ |   |   |   | ♚ |   |   |   | 1 |
+<center>
+	<img width="300" alt="castle_long_move.png" src="./images/castle_long_move.png">
+</center>
 
-| a | b | c | d | e | f | g | h |   |
-|---|---|---|---|---|---|---|---|---|
-|   |   |   |   |   |   |   |   | 3 |
-|   |   |   |   |   |   |   |   | 2 |
-|   |   | ♚ | ♜ |   |   |   |   | 1 |
+<center>
+	<img width="300" alt="castle_long_move2.png" src="./images/castle_long_move2.png">
+</center>
 
  >>> - ***definizione di arrocco lungo***
  >>>    - l'arrocco è effettuato sull'ala di *Donna* (sulla sinistra della scacchiera)
