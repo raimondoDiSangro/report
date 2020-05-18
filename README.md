@@ -77,6 +77,9 @@ _______________
   - eseguendo il comando  
   	[ ***>help*** ]  
   - il risultato è una lista di comandi (uno per riga)
+  <center>
+	<img width="400" alt="command_help.png" src="./images/command_help.png">
+</center>
   > - **esempio comandi**:  
   > *>board*,  
   > *>import*,  
@@ -90,6 +93,9 @@ _______________
   - eseguendo il comando  
   	[ ***>play*** ]  
   - l'applicazione si predispone a ricevere la prima mossa di gioco
+  <center>
+	<img width="400" alt="command_play.png" src="./images/command_play.png">
+</center>
   > - il sistema è in grado di ricevere altri comandi in questo stato, ad esempio  
   > *>mostra scacchiera*,  
   > *>annullare*,  
@@ -102,6 +108,9 @@ _______________
   - eseguendo il comando  
   	[ ***>quit*** ]  
   - l'applicazione lascia il controllo al sistema operativo
+  <center>
+	<img width="400" alt="command_quit.png" src="./images/command_quit.png">
+</center>
   > - (il sistema non accetta più altri comandi e termina)
 _______________
 #### 4) MOSTRARE LA SCACCHIERA
@@ -110,6 +119,9 @@ _______________
   - eseguendo il comando  
   	[ ***>board*** ]  
   - l'applicazione stampa a video la posizione sulla scacchiera
+  <center>
+	<img width="400" alt="command_board.png" src="./images/command_board.png">
+</center>
   > - ogni pezzo è visualizzato con posizione aggiornata all'ultima mossa inserita  
   > - i pezzi sono visualizzati in formato [*Unicode*](https://en.wikipedia.org/wiki/Chess_symbols_in_Unicode)
 _______________
@@ -151,6 +163,9 @@ _______________
   - eseguendo il comando  
   	[ ***>moves***]  
   - l'applicazione mostra la storia delle mosse compiute fino a quel momento
+  <center>
+	<img width="400" alt="command_moves.png" src="./images/command_moves.png">
+</center>
   > - le mosse sono visualizzate in notazione algebrica abbreviata in italiano
 _______________
 #### 7) VISUALIZZARE LE CATTURE
@@ -159,6 +174,9 @@ _______________
   - eseguendo il comando  
   	[***>captures***]  
   - l'applicazione mostra tutte le catture della partita in corso fino a qual momento
+  <center>
+	<img width="400" alt="command_captures.png" src="./images/command_captures.png">
+</center>
   > - mostrare le catture del Bianco e del Nero in caratteri Unicode
 _______________
 #### ***>>>>> [SPRINT 2] user stories <<<<<***
