@@ -2,6 +2,8 @@
 1. [Introduzione](#Introduzione)
 2. [Modello di dominio](#Modello-di-dominio)
 3. [Requisiti specifici](#Requisiti-specifici)
+    - [Requisiti funzionali](#Requisiti-funzionali)
+    - [Requisiti non funzionali](#Requisiti-non-funzionali)
 4. [System Design](#System-Design)
     - [Stile architetturale adottato](#Stile-architetturale-adottato)
     - [Diagramma dei package](#Diagramma-dei-package)
@@ -65,60 +67,63 @@ Il comando *captures* invece fornisce all'utente una lista contenente tutte le c
 
 # Requisiti specifici
 
+### Requisiti funzionali
+_______________
+### ***USER STORIES SPRINT 1***
 _______________
 ### 1) CREARE ELENCO COMANDI
-  - visualizzare elenco dei comandi
-  > #### CRITERI DI ACCETTAZIONE
-  >> eseguendo il comando  
-  >> [ ***>help*** ]  
-  >> il risultato è una lista di comandi (uno per riga)
-  >>> - **esempio comandi**:  
-  >>> *>board*,  
-  >>> *>import*,  
-  >>> *>export*,  
-  >>> *>quit*,  
-  >>> *...*  
+  ***Scopo:*** visualizzare elenco dei comandi
+  #### CRITERI DI ACCETTAZIONE
+  - eseguendo il comando  
+  	[ ***>help*** ]  
+  - il risultato è una lista di comandi (uno per riga)
+  > - **esempio comandi**:  
+  > *>board*,  
+  > *>import*,  
+  > *>export*,  
+  > *>quit*,  
+  > *...*  
 _______________
 ### 2) INIZIARE UNA NUOVA PARTITA
-  - permettere all'utente di interfacciarsi ad una partita
-  > #### CRITERI DI ACCETTAZIONE
-  >> eseguendo il comando  
-  >> [ ***>play*** ]  
-  >> l'applicazione si predispone a ricevere la prima mossa di gioco
-  >>> - il sistema è in grado di ricevere altri comandi in questo stato, ad esempio  
-  >>> *>mostra scacchiera*,  
-  >>> *>annullare*,  
-  >>> *...*
+  ***Scopo:*** permettere all'utente di interfacciarsi ad una partita
+  #### CRITERI DI ACCETTAZIONE
+  - eseguendo il comando  
+  	[ ***>play*** ]  
+  - l'applicazione si predispone a ricevere la prima mossa di gioco
+  > - il sistema è in grado di ricevere altri comandi in questo stato, ad esempio  
+  > *>mostra scacchiera*,  
+  > *>annullare*,  
+  > *...*
 _______________
 ### 3) CHIUDERE IL GIOCO
-  - permettere di uscire dalla partita in corso
-  > #### CRITERI DI ACCETTAZIONE
-  >> eseguendo il comando  
-  >> [ ***>quit*** ]  
-  >> l'applicazione lascia il controllo al sistema operativo
-  >>> - (il sistema non accetta più altri comandi e termina)
+  ***Scopo:*** permettere di uscire dalla partita in corso
+  #### CRITERI DI ACCETTAZIONE
+  - eseguendo il comando  
+  	[ ***>quit*** ]  
+  - l'applicazione lascia il controllo al sistema operativo
+  > - (il sistema non accetta più altri comandi e termina)
 _______________
 ### 4) MOSTRARE LA SCACCHIERA
-  - permettere la visualizzazione a schermo (da CLI) della scacchiera nello stato attuale
-  > #### CRITERI DI ACCETTAZIONE
-  >> eseguendo il comando  
-  >> [ ***>board*** ]  
-  >> l'applicazione stampa a video la posizione sulla scacchiera
-  >>> - ogni pezzo è visualizzato con posizione aggiornata all'ultima mossa inserita  
-  >>> - i pezzi sono visualizzati in formato [*Unicode*](https://en.wikipedia.org/wiki/Chess_symbols_in_Unicode)
+  ***Scopo:*** permettere la visualizzazione a schermo (da CLI) della scacchiera nello stato attuale
+  #### CRITERI DI ACCETTAZIONE
+  - eseguendo il comando  
+  	[ ***>board*** ]  
+  - l'applicazione stampa a video la posizione sulla scacchiera
+  > - ogni pezzo è visualizzato con posizione aggiornata all'ultima mossa inserita  
+  > - i pezzi sono visualizzati in formato [*Unicode*](https://en.wikipedia.org/wiki/Chess_symbols_in_Unicode)
 _______________
 ### 5) MUOVERE UN PEDONE
-  - permettere il movimento del pezzo *pedone* sulla scacchiera
-  > #### CRITERI DI ACCETTAZIONE
-  >> scrivendo il comando in notazione algebrica abbreviata degli scacchi in italiano  
-  >>> - la mossa deve essere legale
-  >>> - se si tenta una mossa non valida viene visualizzato un messaggio *mossa illegale* e l'applicazione rimane in attesa di una mossa valida  
-  >>> - la mossa deve essere scritta come  
-  >>> [**nome pezzo**] + [**casella di arrivo sulla scacchiera**] + [**simbolo speciale**]  
-  >>> dove:    
-  >>>      - [***nome pezzo***] è una lettera riportata nella tabella qui sotto (nel caso dei pedoni non viene utilizzata nessuna lettera)  
-  >>>      - [***casella di arrivo sulla scacchiera***] è un combinazione lettera+numero (id colonna + id riga) [>*chessboard*](https://upload.wikimedia.org/wikipedia/commons/5/51/AlgebraicNotationOnChessboard.png)  
-  >>>      - [***simbolo speciale***] è uno dei simbolo utilizzati per evidenziare il verificarsi di un evento particolare (*scacco*, *scacco matto*, *promozione*, *cattura*, *...*)  
+  ***Scopo:*** permettere il movimento del pezzo *pedone* sulla scacchiera
+  #### CRITERI DI ACCETTAZIONE
+  - scrivendo il comando in notazione algebrica abbreviata degli scacchi in italiano  
+  	- la mossa deve essere legale
+  	- se si tenta una mossa non valida viene visualizzato un messaggio *mossa illegale* e l'applicazione rimane in attesa di una mossa valida  
+  - la mossa deve essere scritta come  
+  	[**nome pezzo**] + [**casella di arrivo sulla scacchiera**] + [**simbolo speciale**]  
+  - dove:    
+  	- [***nome pezzo***] è una lettera riportata nella tabella qui sotto (nel caso dei pedoni non viene utilizzata nessuna lettera)  
+  	- [***casella di arrivo sulla scacchiera***] è un combinazione lettera+numero (id colonna + id riga) [>*chessboard*](https://upload.wikimedia.org/wikipedia/commons/5/51/AlgebraicNotationOnChessboard.png)  
+  	- [***simbolo speciale***] è uno dei simbolo utilizzati per evidenziare il verificarsi di un evento particolare (*scacco*, *scacco matto*, *promozione*, *cattura*, *...*)  
   
 | `nome pezzo` | Re  | Donna | Torre | Alfiere | Cavallo |
 |--------------|-----|-------|-------|---------|---------|
@@ -134,121 +139,124 @@ _______________
 	<img width="300" alt="pawn_move.png" src="./images/pawn_move.png">
 </center>
 
- >>> - ***movimento del pedone***
- >>>    - il pedone può muoversi solo di una casa in avanti, tolta la possibilità di avanzare di due case solo dalla posizione iniziale   
- >>>    - può catturare i pezzi avversari che si trovano in una delle due caselle oblique a lui adiacenti (a eccezione della presa [en passant](https://lh3.googleusercontent.com/proxy/HdFbE8mPf0x5pYtg7hqGuf2lYdxeZZWUVjgbkjy3ofzEqL_EHpY7zvgWleUN-oAH7ZcafKkFByJezfbaukukb97P0wPq7pWUZo0b0xoA2jBXSSWRv4vT6SBDRgf1UsJOzmRAKghF)): è quindi l'unico pezzo che mangia in modo diverso dal proprio normale movimento  
- >>>    - se un pedone riesce a raggiungere il lato opposto della scacchiera, il proprietario del pedone lo deve promuovere sostituendolo con un qualsiasi altro pezzo a sua scelta (purché dello stesso colore, e che non sia il re)
+ > - ***movimento del pedone***
+ >    - il pedone può muoversi solo di una casa in avanti, tolta la possibilità di avanzare di due case solo dalla posizione iniziale   
+ >    - può catturare i pezzi avversari che si trovano in una delle due caselle oblique a lui adiacenti (a eccezione della presa [en passant](https://lh3.googleusercontent.com/proxy/HdFbE8mPf0x5pYtg7hqGuf2lYdxeZZWUVjgbkjy3ofzEqL_EHpY7zvgWleUN-oAH7ZcafKkFByJezfbaukukb97P0wPq7pWUZo0b0xoA2jBXSSWRv4vT6SBDRgf1UsJOzmRAKghF)): è quindi l'unico pezzo che mangia in modo diverso dal proprio normale movimento  
+ >    - se un pedone riesce a raggiungere il lato opposto della scacchiera, il proprietario del pedone lo deve promuovere sostituendolo con un qualsiasi altro pezzo a sua scelta (purché dello stesso colore, e che non sia il re)
 _______________
 ### 6) MOSTRARE MOSSE GIOCATE
-  - permettere di visualizzare lo storico delle mosse giocate
-  > #### CRITERI DI ACCETTAZIONE
-  >> eseguendo il comando  
-  >> [ ***>moves***]  
-  >> l'applicazione mostra la storia delle mosse compiute fino a quel momento
-  >>> - le mosse sono visualizzate in notazione algebrica abbreviata in italiano
+  ***Scopo:*** permettere di visualizzare lo storico delle mosse giocate
+  #### CRITERI DI ACCETTAZIONE
+  - eseguendo il comando  
+  	[ ***>moves***]  
+  - l'applicazione mostra la storia delle mosse compiute fino a quel momento
+  > - le mosse sono visualizzate in notazione algebrica abbreviata in italiano
 _______________
 ### 7) VISUALIZZARE LE CATTURE
-  - permettere di visualizzare a video i pezzi catturati nel corso della partita
-  > #### CRITERI DI ACCETTAZIONE
-  >> eseguendo il comando  
-  >> [***>captures***]  
-  >> l'applicazione mostra tutte le catture della partita in corso fino a qual momento
-  >>> - mostrare le catture del Bianco e del Nero in caratteri Unicode
+  ***Scopo:*** permettere di visualizzare a video i pezzi catturati nel corso della partita
+  #### CRITERI DI ACCETTAZIONE
+  - eseguendo il comando  
+  	[***>captures***]  
+  - l'applicazione mostra tutte le catture della partita in corso fino a qual momento
+  > - mostrare le catture del Bianco e del Nero in caratteri Unicode
+_______________
+### ***USER STORIES SPRINT 2***
 _______________
 
-### 8) MUOVERE UN CAVALLO
-  - permettere il movimento del pezzo *cavallo* sulla scacchiera
-  > #### CRITERI DI ACCETTAZIONE
-  >> scrivendo il comando in notazione algebrica abbreviata degli scacchi in italiano  
-  >>> - la mossa deve essere legale
-  >>> - se si tenta una mossa non valida viene visualizzato un messaggio *mossa illegale* e l'applicazione rimane in attesa di una mossa valida  
-  >>> - la mossa deve essere preceduta da una 'C' 
+### 1) MUOVERE UN CAVALLO
+  ***Scopo:*** permettere il movimento del pezzo *cavallo* sulla scacchiera
+  #### CRITERI DI ACCETTAZIONE
+  - scrivendo il comando in notazione algebrica abbreviata degli scacchi in italiano  
+  	- la mossa deve essere legale
+  	- se si tenta una mossa non valida viene visualizzato un messaggio *mossa illegale* e l'applicazione rimane in attesa di una mossa valida  
+  	- la mossa deve essere preceduta da una 'C' 
   
 <center>
 	<img width="300" alt="knight_move.png" src="./images/knight_move.png">
 </center>
 
- >>> - ***movimento del cavallo***
- >>>    - il *Cavallo* si muove e cattura alternativamente su case bianche e case nere
- >>>    - ogni mossa può essere descritta come due passi in orizzontale (verticale) seguito da un passo in verticale (orizzontale), in modo che il tragitto percorso formi idealmente una "L"
- >>>    - il *Cavallo* è l'unico pezzo presente sulla scacchiera a cui è permesso "saltare" i pezzi, sia alleati, sia avversari 
- >>>    - l'unico dietro i pedoni che all'inizio può essere mosso senza bisogno di spostare prima questi ultimi
+ > - ***movimento del cavallo***
+ >    - il *Cavallo* si muove e cattura alternativamente su case bianche e case nere
+ >    - ogni mossa può essere descritta come due passi in orizzontale (verticale) seguito da un passo in verticale (orizzontale), in modo che il tragitto percorso formi idealmente una "L"
+ >    - il *Cavallo* è l'unico pezzo presente sulla scacchiera a cui è permesso "saltare" i pezzi, sia alleati, sia avversari 
+ >    - l'unico dietro i pedoni che all'inizio può essere mosso senza bisogno di spostare prima questi ultimi
 _______________
-### 9) MUOVERE UN ALFIERE
-  - permettere il movimento del pezzo *alfiere* sulla scacchiera
-  > #### CRITERI DI ACCETTAZIONE
-  >> scrivendo il comando in notazione algebrica abbreviata degli scacchi in italiano  
-  >>> - la mossa deve essere legale
-  >>> - se si tenta una mossa non valida viene visualizzato un messaggio *mossa illegale* e l'applicazione rimane in attesa di una mossa valida  
-  >>> - la mossa deve essere preceduta da una 'A' 
+### 2) MUOVERE UN ALFIERE
+  ***Scopo:*** permettere il movimento del pezzo *alfiere* sulla scacchiera
+  #### CRITERI DI ACCETTAZIONE
+  - scrivendo il comando in notazione algebrica abbreviata degli scacchi in italiano  
+  	- la mossa deve essere legale
+  	- se si tenta una mossa non valida viene visualizzato un messaggio *mossa illegale* e l'applicazione rimane in attesa di una mossa valida  
+  	- la mossa deve essere preceduta da una 'A' 
   
 <center>
 	<img width="300" alt="bishop_move.png" src="./images/bishop_move.png">
 </center>
 
- >>> - ***movimento dell'alfiere***
- >>>    - l'*Alfiere* si muove diagonalmente per il numero di caselle libere che ha a disposizione
- >>>    - l'*Alfiere* è l'unico pezzo che non può cambiare il colore delle case su cui si appoggia nei suoi movimenti in diagonale
+ > - ***movimento dell'alfiere***
+ >    - l'*Alfiere* si muove diagonalmente per il numero di caselle libere che ha a disposizione
+ >    - l'*Alfiere* è l'unico pezzo che non può cambiare il colore delle case su cui si appoggia nei suoi movimenti in diagonale
 _______________
-### 10) MUOVERE UNA TORRE
-  - permettere il movimento del pezzo *torre* sulla scacchiera
-  > #### CRITERI DI ACCETTAZIONE
-  >> scrivendo il comando in notazione algebrica abbreviata degli scacchi in italiano  
-  >>> - la mossa deve essere legale
-  >>> - se si tenta una mossa non valida viene visualizzato un messaggio *mossa illegale* e l'applicazione rimane in attesa di una mossa valida  
-  >>> - la mossa deve essere preceduta da una 'T' 
+### 3) MUOVERE UNA TORRE
+  ***Scopo:*** permettere il movimento del pezzo *torre* sulla scacchiera
+  #### CRITERI DI ACCETTAZIONE
+  - scrivendo il comando in notazione algebrica abbreviata degli scacchi in italiano  
+  	- la mossa deve essere legale
+  	- se si tenta una mossa non valida viene visualizzato un messaggio *mossa illegale* e l'applicazione rimane in attesa di una mossa valida  
+  	- la mossa deve essere preceduta da una 'T' 
   
 <center>
 	<img width="300" alt="rook_move.png" src="./images/rook_move.png">
 </center>
 
- >>> - ***movimento della torre***
- >>>    - la *Torre* si muove sia orizzontalmente sia verticalmente per il numero di caselle libere che ha a disposizione
- >>>    - in congiunzione con il *Re*, può eseguire la mossa dell'arrocco
+ > - ***movimento della torre***
+ >    - la *Torre* si muove sia orizzontalmente sia verticalmente per il numero di caselle libere che ha a disposizione
+ >    - in congiunzione con il *Re*, può eseguire la mossa dell'arrocco
 _______________
-### 11) MUOVERE LA DONNA
- - permettere il movimento del pezzo *donna* sulla scacchiera
-  > #### CRITERI DI ACCETTAZIONE
-  >> scrivendo il comando in notazione algebrica abbreviata degli scacchi in italiano  
-  >>> - la mossa deve essere legale
-  >>> - se si tenta una mossa non valida viene visualizzato un messaggio *mossa illegale* e l'applicazione rimane in attesa di una mossa valida  
-  >>> - la mossa deve essere preceduta da una 'D' 
+### 4) MUOVERE LA DONNA
+ ***Scopo:*** permettere il movimento del pezzo *donna* sulla scacchiera
+  #### CRITERI DI ACCETTAZIONE
+  - scrivendo il comando in notazione algebrica abbreviata degli scacchi in italiano  
+  	- la mossa deve essere legale
+  	- se si tenta una mossa non valida viene visualizzato un messaggio *mossa illegale* e l'applicazione rimane in attesa di una mossa valida  
+  	- la mossa deve essere preceduta da una 'D' 
   
 <center>
 	<img width="300" alt="quuen_move.png" src="./images/queen_move.png">
 </center>
 
- >>> - ***movimento della donna***
- >>>    - la *Donna* si può muovere in linee rette verticalmente, orizzontalmente o in diagonale per il numero di case non occupate che trova
- >>>    - combina dunque le mosse della torre e dell'alfiere
+ > - ***movimento della donna***
+ >    - la *Donna* si può muovere in linee rette verticalmente, orizzontalmente o in diagonale per il numero di case non occupate che trova
+ >    - combina dunque le mosse della torre e dell'alfiere
 _______________
-### 12) MUOVERE IL RE
- - permettere il movimento del pezzo *re* sulla scacchiera
-  > #### CRITERI DI ACCETTAZIONE
-  >> scrivendo il comando in notazione algebrica abbreviata degli scacchi in italiano  
-  >>> - la mossa deve essere legale
-  >>> - se si tenta una mossa non valida viene visualizzato un messaggio *mossa illegale* e l'applicazione rimane in attesa di una mossa valida  
-  >>> - la mossa deve essere preceduta da una 'R' 
-  >>> - il *Re* non può muoversi in case minacciate da pezzi avversari 
-  >>> - il *Re* può catturare pezzi avversari
+### 5) MUOVERE IL RE
+ ***Scopo:*** permettere il movimento del pezzo *re* sulla scacchiera
+ #### CRITERI DI ACCETTAZIONE
+ - scrivendo il comando in notazione algebrica abbreviata degli scacchi in italiano  
+ 	- la mossa deve essere legale
+  	- se si tenta una mossa non valida viene visualizzato un messaggio *mossa illegale* e l'applicazione rimane in attesa di una mossa valida  
+  	- la mossa deve essere preceduta da una 'R' 
+  	- il *Re* non può muoversi in case minacciate da pezzi avversari 
+  	- il *Re* può catturare pezzi avversari
+	- nessun pezzo amico deve permettere di "scoprire" il *Re* con la propria mossa
   
 <center>
 	<img width="300" alt="king_move.png" src="./images/king_move.png">
 </center>
 
- >>> - ***movimento del re***
- >>>    - il *Re* può muoversi di una casa alla volta in qualsiasi direzione (verticale, orizzontale o diagonale) a condizione che la casa di arrivo non sia minacciata da un pezzo avversario
- >>>    - in congiunzione con la *Torre*, può eseguire la mossa dell'arrocco
+ > - ***movimento del re***
+ >    - il *Re* può muoversi di una casa alla volta in qualsiasi direzione (verticale, orizzontale o diagonale) a condizione che la casa di arrivo non sia minacciata da un pezzo avversario
+ >    - in congiunzione con la *Torre*, può eseguire la mossa dell'arrocco
 _______________
-### 13) EFFETTUARE UN ARROCCO CORTO
-  - permettere l'esecuzione di un arrocco corto
-  > #### CRITERI DI ACCETTAZIONE
-  >> scrivendo il comando '0-0' in notazione algebrica abbreviata degli scacchi
-  >>> - il giocatore non deve aver mai mosso il *Re*
-  >>> - il giocatore non deve aver mai mosso la *Torre* coinvolta nell'arrocco corto (deve quindi essere in un angolo di destra della scacchiera) 
-  >>> - non ci devono essere pezzi tra il *Re* e la *Torre* coinvolta, né amici né avversari 
-  >>> - il *Re* non deve essere minacciato 
-  >>> - il *Re*, durante il movimento dell'arrocco, non deve attraversare caselle in cui si troverebbe sotto *scacco* 
+### 6) EFFETTUARE UN ARROCCO CORTO
+  ***Scopo:*** permettere l'esecuzione di un arrocco corto
+  #### CRITERI DI ACCETTAZIONE
+  - scrivendo il comando '0-0' in notazione algebrica abbreviata degli scacchi
+  	- il giocatore non deve aver mai mosso il *Re*
+  	- il giocatore non deve aver mai mosso la *Torre* coinvolta nell'arrocco corto (deve quindi essere in un angolo di destra della scacchiera) 
+  	- non ci devono essere pezzi tra il *Re* e la *Torre* coinvolta, né amici né avversari 
+  	- il *Re* non deve essere minacciato 
+  	- il *Re*, durante il movimento dell'arrocco, non deve attraversare caselle in cui si troverebbe sotto *scacco* 
   
 <center>
 	<img width="300" alt="castle_short_move.png" src="./images/castle_short_move.png">
@@ -258,20 +266,20 @@ _______________
 	<img width="300" alt="castle_short_move2.png" src="./images/castle_short_move2.png">
 </center>
 
- >>> - ***definizione di arrocco corto***
- >>>    - l'arrocco è effettuato sull'ala di *Re* (sulla destra della scacchiera)
- >>>    - [***per il Bianco***] il *Re* da **e1** muove in **g1**, la *Torre* da **h1** muove in **f1**
- >>>    - [***per il Nero***] il *Re* da **e8** muove in **g8**, la *Torre* da **h8** muove in **f8**
+ > - ***definizione di arrocco corto***
+ >    - l'arrocco è effettuato sull'ala di *Re* (sulla destra della scacchiera)
+ >    - [***per il Bianco***] il *Re* da **e1** muove in **g1**, la *Torre* da **h1** muove in **f1**
+ >    - [***per il Nero***] il *Re* da **e8** muove in **g8**, la *Torre* da **h8** muove in **f8**
 _______________
-### 14) EFFETTUARE UN ARROCCO LUNGO
-  - permettere l'esecuzione di un arrocco lungo
-  > #### CRITERI DI ACCETTAZIONE
->> scrivendo il comando '0-0-0' in notazione algebrica abbreviata degli scacchi
-  >>> - il giocatore non deve aver mai mosso il *Re*
-  >>> - il giocatore non deve aver mai mosso la *Torre* coinvolta nell'arrocco lungo (deve quindi essere in un angolo di sinistra della scacchiera) 
-  >>> - non ci devono essere pezzi tra il *Re* e la *Torre* coinvolta, né amici né avversari 
-  >>> - il *Re* non deve essere minacciato 
-  >>> - il *Re*, durante il movimento dell'arrocco, non deve attraversare caselle in cui si troverebbe sotto *scacco* 
+### 7) EFFETTUARE UN ARROCCO LUNGO
+  ***Scopo:*** permettere l'esecuzione di un arrocco lungo
+  #### CRITERI DI ACCETTAZIONE
+  - scrivendo il comando '0-0-0' in notazione algebrica abbreviata degli scacchi
+  	- il giocatore non deve aver mai mosso il *Re*
+  	- il giocatore non deve aver mai mosso la *Torre* coinvolta nell'arrocco lungo (deve quindi essere in un angolo di sinistra della scacchiera) 
+  	- non ci devono essere pezzi tra il *Re* e la *Torre* coinvolta, né amici né avversari 
+  	- il *Re* non deve essere minacciato 
+  	- il *Re*, durante il movimento dell'arrocco, non deve attraversare caselle in cui si troverebbe sotto *scacco* 
   
 <center>
 	<img width="300" alt="castle_long_move.png" src="./images/castle_long_move.png">
@@ -281,10 +289,10 @@ _______________
 	<img width="300" alt="castle_long_move2.png" src="./images/castle_long_move2.png">
 </center>
 
- >>> - ***definizione di arrocco lungo***
- >>>    - l'arrocco è effettuato sull'ala di *Donna* (sulla sinistra della scacchiera)
- >>>    - [***per il Bianco***] il *Re* da **e1** muove in **c1**, la *Torre* da **a1** muove in **d1**
- >>>    - [***per il Nero***] il *Re* da **e8** muove in **c8**, la *Torre* da **a8** muove in **d8**
+ > - ***definizione di arrocco lungo***
+ >    - l'arrocco è effettuato sull'ala di *Donna* (sulla sinistra della scacchiera)
+ >    - [***per il Bianco***] il *Re* da **e1** muove in **c1**, la *Torre* da **a1** muove in **d1**
+ >    - [***per il Nero***] il *Re* da **e8** muove in **c8**, la *Torre* da **a8** muove in **d8**
 _______________
 
 <br> <br>
