@@ -68,6 +68,7 @@ Il comando *captures* invece fornisce all'utente una lista contenente tutte le c
 # Requisiti specifici
 
 ### Requisiti funzionali
+
 _______________
 #### ***>>>>> [SPRINT 1] user stories <<<<<***
 _______________
@@ -325,6 +326,10 @@ _______________
  >    - [***per il Bianco***] il *Re* da **e1** muove in **c1**, la *Torre* da **a1** muove in **d1**
  >    - [***per il Nero***] il *Re* da **e8** muove in **c8**, la *Torre* da **a8** muove in **d8**
 _______________
+
+### Requisiti non funzionali
+
+- es. terminali da utilizzare
 
 <br> <br>
 [Torna all'indice...](#Indice)
