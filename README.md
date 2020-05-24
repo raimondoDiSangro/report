@@ -513,6 +513,31 @@ docker run -it --rm docker.pkg.github.com/softeng1920-inf-uniba/docker_1920/wilk
   - il foglio di calcolo può essere salvato in locale in formato CSV
 
 <br> <br>
+
+MANUALE RIVISTO:
+Per utilizzare Scacchi sul proprio terminale, occorre scaricare l'immagine Docker dell'ultima build, ed in seguito, avviarla.
+
+ - Comando per il download dell' immagine docker più aggiornata:
+```
+docker pull docker.pkg.github.com/softeng1920-inf-uniba/docker_1920/wilkinson:latest
+```
+
+ - Esecuzione via Docker attraverso il comando:
+```
+docker run -it --rm docker.pkg.github.com/softeng1920-inf-uniba/docker_1920/wilkinson:latest
+```
+Si rammenta che qualora si utilizzi la Git Bash, occorrerà anteporre il prefisso "winpty" ai comandi appena indicati.
+<br><br>
+
+* `play` consente di iniziare una nuova partita e offre queste funzionalità:
+   - la possibilità di introdurre mosse in notazione algebrica abbreviata per proseguire con la partita appena iniziata
+   - `board`: mostra la scacchiera con la configurazione attuale dei pezzi presenti sulla scacchiera
+   - `moves`: mostra in notazione algebrica tutti i movimenti eseguiti fino al lancio del comando 
+   - `captures`: mostra tutte le catture avvenute fino al momento in cui viene eseguito il comando
+   - `help`: mostra i comandi disponibili per l'applicazione
+   - `play`: a partita in corso, consente di interrompere la partita corrente, e previa conferma, iniziarne una nuova
+   - `quit`: permette all'utente di abbandonare la partita in corso, previa conferma
+
 [Torna all'indice...](#Indice)
 
 # Processo di sviluppo e organizzazione del lavoro
